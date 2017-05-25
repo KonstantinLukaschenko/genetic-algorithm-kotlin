@@ -5,9 +5,9 @@ This is a basic implementation of a [Genetic Algorithm](https://en.wikipedia.org
 and search problems relying on bio-inspired operations such as crossover, mutation and selection.
 
 ## Example Usage
-The following example showcases a simple usage of the algorithm. It will create a random population of genes, 
-represented as a list with a uniform distribution of 0s (disease genome) and 1s (health genome) and evolve the 
-genes towards a healthy population.
+The following example showcases a simple usage of the algorithm. It creates a random population of genes, 
+represented as a list with uniformly distributed zeros (disease genome) and ones (health genome) and evolves the 
+genes towards a healthy population afterwards.
 
 ```kotlin
 import java.lang.Math.random
