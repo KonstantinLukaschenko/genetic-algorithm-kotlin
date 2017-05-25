@@ -15,7 +15,7 @@ fun <T> truncationSelection(scoredPopulation: Collection<Pair<Double, T>>): T {
 }
 
 /**
- * Selects an individual with a probability proportional to it's score. Also known as roulette wheel select.
+ * Selects an individual with a probability proportional to it's score. Also known as roulette wheel selection.
  */
 fun <T> fitnessProportionateSelection(scoredPopulation: Collection<Pair<Double, T>>): T {
     var value = scoredPopulation.sumByDouble { it.first } * random()
