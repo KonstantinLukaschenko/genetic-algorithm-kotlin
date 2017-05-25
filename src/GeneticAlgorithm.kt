@@ -9,7 +9,7 @@ import java.lang.Math.random
  * @property score a function which scores the fitness of an individual. Higher fitness is better.
  * @property cross a function which implements the crossover of two individuals resulting in a child.
  * @property mutate a function which mutates a given individual.
- * @property select a function which implements a selection strategy of an individuals from the population.
+ * @property select a function which implements a selection strategy of an individual from the population.
  */
 class GeneticAlgorithm<T>(
         var population: Collection<T>,
@@ -30,9 +30,8 @@ class GeneticAlgorithm<T>(
         for (i in 0..epochs)
             scoredPopulation = scoredPopulation
                     .map { Pair(select(scoredPopulation), select(scoredPopulation)) }
-                    .map { cross(it)}
-                    .map { mutate(it) }
-                    .map { if (random() <= mutationProbability) mutate(it) else it}
+                    .map { cross(it) }
+                    .map { if (random() <= mutationProbability) mutate(it) else it }
                     .map { Pair(score(it), it) }
                     .sortedByDescending { it.first }
 
